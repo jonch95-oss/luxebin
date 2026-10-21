@@ -16,15 +16,15 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [x] No empty collections
 - [x] Menus: luxebin-main (mega menu), footer Shop / Help / Luxebin
 
-## Theme ("Luxebin — Warm Luxury", unpublished, built on Dawn 16.0.0)
+## Theme ("Luxebin — Warm Luxury v2", unpublished, built on Dawn 16.0.0)
 - [x] Direction B tokens, Cormorant Garamond + Jost, metallic wordmark
 - [x] Homepage sections in brief order
 - [x] Product page: brand link, title, price with retail struck through and Save X%, shade pills, accordions, authenticity badge, sticky add-to-bag on mobile, You may also like
 - [x] Cart drawer with final-sale note
 - [x] Theme check: 0 errors
-- [ ] Walkthrough screenshots (blocked: storefront password needed)
-- [ ] Lighthouse mobile/desktop scores (blocked: storefront password needed)
-- [ ] Publish theme (only on your go-ahead)
+- [x] Walkthrough screenshots in screens/: homepage desktop + mobile, Makeup collection desktop + mobile, 10 product pages, product page mobile, Authenticity page, 404. No Liquid errors, no sideways scroll at 390px, cream background and header on every page
+- [ ] Lighthouse mobile/desktop scores: run once the password page is off (the password page blocks automated testing). Fonts now load from Shopify's own CDN, nothing render-blocking from apps on the homepage
+- [ ] Publish theme v2 (on your go-ahead). Old themes "Dawn 16 import" and "Luxebin v1" can be deleted
 
 ## Pages and policies
 - [x] Pages: About, Authenticity Guarantee, FAQ, Contact (existing)
@@ -44,8 +44,11 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 
 ## Apps and marketing
 - [x] Discount WELCOME10: 10% off, once per customer, combines with free shipping
-- [ ] Install Klaviyo, Judge.me, Shopify Inbox, Search & Discovery (all free tiers)
-- [ ] Klaviyo: popup (fires once per visitor), welcome flow with 10% code, abandoned cart x2, post-purchase review request
+- [x] Klaviyo, Judge.me, Shopify Inbox, Search & Discovery installed
+- [x] Judge.me star badge and review widget placed on product pages; star ratings switched on for product cards
+- [ ] Theme editor → App embeds: turn on Judge.me Core, Klaviyo Onsite, Shopify Inbox (content/klaviyo/klaviyo-setup.md §5)
+- [ ] Search & Discovery filters: Brand, Product type, Price, Availability (§6)
+- [~] Klaviyo popup and flows: full copy and settings ready in content/klaviyo/klaviyo-setup.md; I'll build them as soon as the Klaviyo connector is authorised (claude.ai connector settings), or paste them in yourself
 - [ ] Popup tested, code tested
 
 ## Final QA
