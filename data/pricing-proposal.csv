@@ -1,0 +1,30 @@
+sku,product,unit_cost,current_price,msrp,proposed_price,margin,status
+DRUNK-005,Drunk Elephant B-Hydra Intensive Hydration Serum,6.5,15.00,,,,NO VERIFIED MSRP - decide
+ATU-KYLIE-129,Kylie Cosmetics High Gloss,7.5,22.00,20,17.0,56%,ok
+ATU-KYLIE-131,Kylie Cosmetics Plumping Lip Liner,8.5,19.00,19,16.0,47%,ok
+DRUNK-062,Drunk Elephant Protini Polypeptide Cream,4.75,15.00,,,,NO VERIFIED MSRP - decide
+ATU-RARE-058,Rare Beauty Soft Pinch Tinted Lip Oil Stain,7.5,23.00,24,20.0,62%,ok
+ATU-TRU-009,Truly Beauty Glazed Donut Luxury Peptide Lip Oil,7.5,29.00,18,15.0,50%,ok
+ATU-TRU-016,Truly Beauty Cherry Baby Shimmer Luxury Peptide Lip Oil,7.5,19.00,18,15.0,50%,ok
+ATU-RARE-053,Rare Beauty Positive Light Liquid Luminizer,10.0,28.00,,,,NO VERIFIED MSRP - decide
+ATU-RARE-046,Rare Beauty Soft Pinch Dewy Liquid Blush,10.0,25.00,25,21.0,52%,ok
+ATU-RARE-036,Rare Beauty Tinted Lip Oil,7.5,25.00,24,20.0,62%,ok
+REM-004,Rem Beauty On Your Collar Plumping Lipgloss,3.0,17.00,17,14.0,79%,ok
+REM-008,Rem Beauty On Your Collar Plumping Lipgloss,3.0,17.00,17,14.0,79%,ok
+COV-352,CoverGirl Outlast Extreme Wear Concealer,3.0,16.99,10.79,9.0,67%,ok
+ATU-JANE-007,Sol de Janeiro Beija Flor Renewing Body Wash,5.0,26.00,12,10.0,50%,ok
+ATU-DIBS-018,Dibs Beauty Jam Jam Plumping Lipstick Melt,7.5,26.00,26,22.0,66%,ok
+ATU-DIBS-016,Dibs Beauty Jam Jam Plumping Lipstick Melt,7.5,26.00,26,22.0,66%,ok
+ATU-DIBS-019,Dibs Beauty Jam Jam Plumping Lipstick Melt,7.5,26.00,26,22.0,66%,ok
+LAURAM-287,Laura Mercier Real Flawless Luminous Perfecting Pressed Powder,15.5,49.00,52,44.0,65%,ok
+DRUNK-044,Drunk Elephant Lala Retro Whipped Cream,9.0,27.00,22,18.5,51%,ok
+ATU-LANE-008,Laneige Water Bank and Sleeping Mask Toner 3-Piece Set,6.5,25.00,,,,NO VERIFIED MSRP - decide
+LANE-009,Laneige Lip Sleeping Mask,11.5,24.00,24,20.0,42%,BELOW 45% FLOOR
+LAURAM-291,Laura Mercier Neroli Du Sud Serum Body Cream,24.5,78.00,78,66.0,63%,ok
+MAYB-907,Maybelline Colorsensational Lip Gloss,0.5,12.99,,,,NO VERIFIED MSRP - decide
+ATU-FBM-005,Florence by Mills Mark My Words Lip Liner,3.5,12.00,12,10.0,65%,ok
+DPP-004,Dr Pawpaw Mini Nude Collection 3-Piece Set,2.75,19.99,12.5,10.5,74%,ok
+INB-OLAP-048,Olaplex No. 4 Bond Maintenance Shampoo,12.5,34.00,34,28.5,56%,ok
+ESLA-239,Estée Lauder Double Wear Stay-in-Place Concealer,7.5,32.00,,,,NO VERIFIED MSRP - decide
+NARS-314,Nars Sheer Glow Foundation,12.0,47.00,50,42.5,72%,ok
+INB-OLAP-050,Olaplex The Endless Shine Smooth Hair Set,26.5,58.00,,,,NO VERIFIED MSRP - decide
