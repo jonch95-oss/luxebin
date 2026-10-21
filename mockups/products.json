@@ -1,0 +1,130 @@
+{
+ "best": [
+  [
+   "ATU-RARE-046",
+   "Rare Beauty",
+   "Soft Pinch Liquid Blush — Lucky",
+   21,
+   25
+  ],
+  [
+   "LAURAM-287",
+   "Laura Mercier",
+   "Real Flawless Pressed Powder — Translucent",
+   44,
+   52
+  ],
+  [
+   "LANE-009",
+   "Laneige",
+   "Lip Sleeping Mask — Berry",
+   21,
+   24
+  ],
+  [
+   "ATU-DIBS-018",
+   "Dibs Beauty",
+   "Jam Jam Lipstick Melt — First Date",
+   22,
+   26
+  ],
+  [
+   "ATU-RARE-058",
+   "Rare Beauty",
+   "Soft Pinch Tinted Lip Oil — Wonder",
+   20,
+   24
+  ],
+  [
+   "INB-OLAP-048",
+   "Olaplex",
+   "Nº.4 Bond Maintenance Shampoo",
+   28.5,
+   34
+  ],
+  [
+   "ATU-KYLIE-129",
+   "Kylie Cosmetics",
+   "High Gloss — Diva",
+   17.5,
+   21
+  ],
+  [
+   "ATU-TRU-009",
+   "Truly",
+   "Peptide Lip Oil — Glazed Donut",
+   15,
+   18
+  ]
+ ],
+ "new": [
+  [
+   "ATU-JANE-007",
+   "Sol de Janeiro",
+   "Beija Flor Renewing Body Wash 90 ml",
+   10,
+   12
+  ],
+  [
+   "ATU-KYLIE-131",
+   "Kylie Cosmetics",
+   "Plumping Lip Liner — Toffee",
+   16,
+   19
+  ],
+  [
+   "ATU-RARE-053",
+   "Rare Beauty",
+   "Positive Light Liquid Luminizer — Reveal",
+   23.5,
+   28
+  ],
+  [
+   "LAURAM-291",
+   "Laura Mercier",
+   "Néroli du Sud Serum Body Cream",
+   46.5,
+   55
+  ],
+  [
+   "DPP-004",
+   "Dr. PAWPAW",
+   "Mini Nude Collection Trio",
+   16.5,
+   19.99
+  ],
+  [
+   "ATU-TRU-016",
+   "Truly",
+   "Peptide Lip Oil — Cherry Baby",
+   15,
+   18
+  ],
+  [
+   "ATU-RARE-036",
+   "Rare Beauty",
+   "Soft Pinch Tinted Lip Oil — Hope",
+   20,
+   24
+  ],
+  [
+   "ATU-DIBS-016",
+   "Dibs Beauty",
+   "Jam Jam Lipstick Melt — Fig Fantasy",
+   22,
+   26
+  ]
+ ],
+ "brands": [
+  "Rare Beauty",
+  "Laura Mercier",
+  "Drunk Elephant",
+  "NARS",
+  "Olaplex",
+  "Laneige",
+  "Estée Lauder",
+  "Sol de Janeiro",
+  "Kylie Cosmetics",
+  "Dibs Beauty"
+ ]
+}
