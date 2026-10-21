@@ -1,0 +1,48 @@
+{{ 'luxebin-sections.css' | asset_url | stylesheet_tag }}
+<section class="lx-sec lx-wrap" aria-labelledby="LxCats-{{ section.id }}">
+  {%- if section.settings.eyebrow != blank -%}<p class="lx-caps lx-eyebrow lx-center">{{ section.settings.eyebrow }}</p>{%- endif -%}
+  <h2 class="lx-h2 lx-center" id="LxCats-{{ section.id }}">{{ section.settings.heading }}</h2>
+  <div class="lx-cats__grid">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign c = block.settings.collection
+        assign p = block.settings.image_product
+        assign label = block.settings.label | default: c.title
+      -%}
+      <a class="lx-cat{% if block.settings.bleed %} lx-cat--bleed{% endif %}" href="{{ c.url | default: '#' }}" {{ block.shopify_attributes }}>
+        {%- if p != blank and p.featured_media -%}
+          {{ p.featured_media.preview_image | image_url: width: 900 | image_tag: alt: '', loading: 'lazy', widths: '400, 600, 900', sizes: '(min-width: 750px) 33vw, 50vw' }}
+        {%- endif -%}
+        <div class="lx-cat__lbl">
+          <h3>{{ label }}</h3>
+          {%- if c != blank -%}<span class="lx-caps">{{ c.products_count }} {% if c.products_count == 1 %}piece{% else %}pieces{% endif %}</span>{%- endif -%}
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Luxebin categories",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Shop by category" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find your ritual" }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Category tile",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "text", "id": "label", "label": "Label (defaults to collection title)" },
+        { "type": "product", "id": "image_product", "label": "Product whose image is shown" },
+        { "type": "checkbox", "id": "bleed", "label": "Fill tile with image (for photos with their own background)", "default": false }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "Luxebin categories" }]
+}
+{% endschema %}

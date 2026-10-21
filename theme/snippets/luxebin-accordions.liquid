@@ -1,0 +1,34 @@
+{%- comment -%}
+  Product information accordions. Rows with no content are skipped.
+  Reads: product.description, custom.key_benefits (list of text), custom.how_to_use, custom.ingredients
+  Accepts: product, section_id
+{%- endcomment -%}
+<div class="lx-accordions">
+  {%- if product.description != blank -%}
+    {%- capture body -%}{{ product.description }}{%- endcapture -%}
+    {%- render 'luxebin-accordion-item', id: 'desc', title: 'Description', content: body, open: true -%}
+  {%- endif -%}
+
+  {%- assign benefits = product.metafields.custom.key_benefits.value -%}
+  {%- if benefits != blank -%}
+    {%- capture body -%}<ul>{%- for b in benefits -%}<li>{{ b | escape }}</li>{%- endfor -%}</ul>{%- endcapture -%}
+    {%- render 'luxebin-accordion-item', id: 'benefits', title: 'Key benefits', content: body -%}
+  {%- endif -%}
+
+  {%- if product.metafields.custom.how_to_use != blank -%}
+    {%- capture body -%}<p>{{ product.metafields.custom.how_to_use.value | escape | newline_to_br }}</p>{%- endcapture -%}
+    {%- render 'luxebin-accordion-item', id: 'howto', title: 'How to use', content: body -%}
+  {%- endif -%}
+
+  {%- if product.metafields.custom.ingredients != blank -%}
+    {%- capture body -%}<p>{{ product.metafields.custom.ingredients.value | escape }}</p><p class="lx-final-sale-note">Ingredient lists can change. Please refer to the packaging of the product you receive for the most up-to-date list.</p>{%- endcapture -%}
+    {%- render 'luxebin-accordion-item', id: 'ingredients', title: 'Ingredients', content: body -%}
+  {%- endif -%}
+
+  {%- capture body -%}
+    <p><strong>Shipping.</strong> We ship from New York to anywhere in the US. Orders over {{ 5000 | money_without_trailing_zeros }} ship free.</p>
+    <p><strong>Final sale.</strong> Because every piece is sold below retail, all sales are final and we can't accept returns or exchanges. If your order arrives damaged, send us a photo within 7 days of delivery and we'll replace it.</p>
+    {%- if pages['shipping-final-sale'].id -%}<p><a href="{{ pages['shipping-final-sale'].url }}">Read the full policy</a></p>{%- else -%}<p><a href="{{ shop.refund_policy.url | default: '/policies/refund-policy' }}">Read the full policy</a></p>{%- endif -%}
+  {%- endcapture -%}
+  {%- render 'luxebin-accordion-item', id: 'shipping', title: 'Shipping &amp; final sale', content: body -%}
+</div>

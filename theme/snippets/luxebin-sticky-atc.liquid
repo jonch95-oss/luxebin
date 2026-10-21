@@ -1,0 +1,30 @@
+{%- comment -%} Mobile sticky add-to-bag bar. Submits the main product form. Accepts: product, section_id {%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+<div class="lx-sticky-atc" id="LxStickyAtc-{{ section_id }}" aria-hidden="true">
+  <div class="lx-sticky-atc__info">
+    <div class="lx-sticky-atc__title">{{ product.title | escape }}</div>
+    {%- render 'price', product: product, use_variant: true -%}
+  </div>
+  <button
+    type="submit"
+    form="product-form-{{ section_id }}"
+    name="add"
+    class="button"
+    tabindex="-1"
+    {% unless v.available %}disabled{% endunless %}
+  >
+    {%- if v.available -%}Add to bag{%- else -%}{{ 'products.product.sold_out' | t }}{%- endif -%}
+  </button>
+</div>
+<script>
+  (function () {
+    var bar = document.getElementById('LxStickyAtc-{{ section_id }}');
+    var target = document.querySelector('#product-form-{{ section_id }} [name="add"]');
+    if (!bar || !target || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      var show = !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0;
+      bar.classList.toggle('is-visible', show);
+      bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+    }).observe(target);
+  })();
+</script>

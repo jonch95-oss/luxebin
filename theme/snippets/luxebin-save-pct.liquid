@@ -1,0 +1,11 @@
+{%- comment -%}
+  Renders "Save X%" from a compare-at and a selling price (in cents).
+  Accepts: compare_at {Number}, price {Number}
+{%- endcomment -%}
+{%- liquid
+  assign save_pct = 0
+  if compare_at > price
+    assign save_pct = compare_at | minus: price | times: 100.0 | divided_by: compare_at | round
+  endif
+-%}
+{%- if save_pct > 0 -%}Save {{ save_pct }}%{%- endif -%}

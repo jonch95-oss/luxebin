@@ -1,0 +1,527 @@
+/* Luxebin — Direction B (warm luxury) overrides on top of Dawn base.css */
+
+:root {
+  --lx-bg: #faf6ef;
+  --lx-surface: #f2eadf;
+  --lx-surface-2: #ede2d3;
+  --lx-text: #2a2420;
+  --lx-muted: #6f6359;
+  --lx-accent: #a27b4c;
+  --lx-accent-deep: #7c5a34;
+  --lx-hairline: #e2d5c3;
+  --lx-sale: #8c3b2e;
+  --lx-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --lx-sans: 'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --font-heading-family: var(--lx-serif);
+  --font-heading-style: normal;
+  --font-heading-weight: 500;
+  --font-body-family: var(--lx-sans);
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 500;
+}
+
+body {
+  font-variant-numeric: lining-nums;
+  letter-spacing: 0.01rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .h0, .h1, .h2, .h3 {
+  font-family: var(--lx-serif);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+h4, h5, .h4, .h5 {
+  font-family: var(--lx-serif);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.lx-caps,
+.caption-with-letter-spacing {
+  font-family: var(--lx-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.lx-eyebrow {
+  color: var(--lx-accent-deep);
+  margin: 0 0 1.4rem;
+}
+
+:focus-visible {
+  outline-color: var(--lx-accent-deep);
+}
+
+/* Buttons */
+.button,
+.shopify-challenge__button,
+.customer button,
+button.shopify-payment-button__button--unbranded {
+  font-family: var(--lx-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  min-height: 5rem;
+  padding: 0 3.4rem;
+}
+
+.button--secondary {
+  --color-button: var(--lx-bg);
+}
+
+.link-underline {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.3rem;
+  text-decoration: none;
+}
+
+/* Announcement bar */
+.announcement-bar__message {
+  font-family: var(--lx-sans);
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  padding: 1rem 0;
+}
+
+.announcement-bar__message strong {
+  color: #e3c79a;
+  font-weight: 500;
+}
+
+/* Header */
+.section-header .header-wrapper {
+  border-bottom: 1px solid var(--lx-hairline);
+}
+
+.header-wrapper--border-bottom {
+  border-bottom: 1px solid var(--lx-hairline);
+}
+
+.header__menu-item,
+.mega-menu__link--level-2,
+.header__menu-item span {
+  font-family: var(--lx-sans);
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mega-menu__link {
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+.mega-menu__content {
+  border-top: 1px solid var(--lx-hairline);
+}
+
+.luxebin-wordmark {
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+  .header__heading-logo-wrapper .luxebin-wordmark {
+    width: 120px;
+  }
+}
+
+.menu-drawer__menu-item {
+  font-family: var(--lx-serif);
+  font-size: 2.2rem;
+}
+
+/* Product cards */
+.card-wrapper .card__media,
+.card-wrapper .card__inner {
+  background: var(--lx-surface);
+}
+
+.card .card__inner .card__media img,
+.card-wrapper .media img {
+  mix-blend-mode: multiply;
+  object-fit: cover;
+}
+
+.card__vendor {
+  color: var(--lx-text);
+  margin: 1.6rem 0 0.6rem;
+}
+
+.card-information > .price,
+.card-information .price {
+  margin-top: 0.8rem;
+}
+
+.card__heading {
+  font-family: var(--lx-serif);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.card__heading a:hover,
+.card-wrapper:hover .card__heading .full-unstyled-link {
+  text-decoration: none;
+}
+
+.card-wrapper:hover .card__media img {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
+}
+
+.card__information {
+  padding-top: 0;
+}
+
+/* Badges: one quiet outlined tag */
+.badge {
+  background: rgba(250, 246, 239, 0.88);
+  border: 1px solid rgba(140, 59, 46, 0.45);
+  border-radius: 0;
+  font-family: var(--lx-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  padding: 0.6rem 0.8rem;
+  text-transform: uppercase;
+}
+
+.card__badge .badge.color-scheme-1 {
+  border-color: var(--lx-hairline);
+  color: var(--lx-muted);
+}
+
+/* Prices: our price first, retail struck through and muted */
+.price {
+  font-family: var(--lx-sans);
+  letter-spacing: 0.02em;
+}
+
+.price__sale {
+  align-items: baseline;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+}
+
+.price .price-item--sale,
+.price .price-item--regular {
+  color: var(--lx-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.price--on-sale .price__retail .price-item--regular,
+.price__sale s.price-item--regular {
+  color: var(--lx-muted);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.price--large .price-item--sale,
+.price--large .price-item--regular {
+  font-size: 2rem;
+}
+
+.price--large .price__retail .price-item--regular {
+  font-size: 1.6rem;
+}
+
+.price__badge-sale {
+  margin-left: 1rem;
+}
+
+/* Section headings */
+.title-wrapper-with-link .title,
+.collection__title .title {
+  font-family: var(--lx-serif);
+  font-weight: 500;
+}
+
+.title-wrapper-with-link .link {
+  border-bottom: 1px solid var(--lx-text);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  padding-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+/* Collection page */
+.collection-hero__title {
+  font-family: var(--lx-serif);
+}
+
+.facets__summary,
+.facet-filters__label,
+.product-count__text {
+  font-family: var(--lx-sans);
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.facets__disclosure,
+.facets-container,
+.facets__form-vertical {
+  border-color: var(--lx-hairline);
+}
+
+/* Product page */
+.product__title h1 {
+  font-family: var(--lx-serif);
+  font-size: clamp(3rem, 3.2vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.product__vendor-link {
+  color: var(--lx-text);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.product__vendor-link:hover {
+  color: var(--lx-accent-deep);
+}
+
+.product__info-container .product__text.caption-with-letter-spacing {
+  margin-bottom: 0.8rem;
+}
+
+.product-form__input .form__label,
+.product-form__input legend {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.product-form__input input[type='radio'] + label {
+  border-radius: 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.product__media-item .media {
+  background: var(--lx-surface);
+}
+
+.product__media-item .media img {
+  mix-blend-mode: multiply;
+}
+
+.product__accordion .summary__title .accordion__title,
+.lx-accordion summary .accordion__title {
+  font-family: var(--lx-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.accordion {
+  border-color: var(--lx-hairline);
+}
+
+.accordion__content {
+  color: var(--lx-muted);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.lx-authentic {
+  align-items: center;
+  border: 1px solid var(--lx-hairline);
+  color: var(--lx-text);
+  display: flex;
+  gap: 1.2rem;
+  margin: 1.6rem 0 0;
+  padding: 1.4rem 1.6rem;
+  text-decoration: none;
+}
+
+.lx-authentic:hover {
+  border-color: var(--lx-accent);
+}
+
+.lx-authentic svg {
+  flex: 0 0 2.4rem;
+  fill: none;
+  height: 2.4rem;
+  stroke: var(--lx-accent-deep);
+  stroke-width: 1.2;
+  width: 2.4rem;
+}
+
+.lx-authentic strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lx-authentic span {
+  color: var(--lx-muted);
+  font-size: 1.3rem;
+}
+
+.lx-final-sale-note {
+  color: var(--lx-muted);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+/* Sticky add to bag on mobile */
+.lx-sticky-atc {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .lx-sticky-atc {
+    align-items: center;
+    background: var(--lx-bg);
+    border-top: 1px solid var(--lx-hairline);
+    bottom: 0;
+    display: flex;
+    gap: 1.2rem;
+    left: 0;
+    padding: 1rem 1.6rem calc(1rem + env(safe-area-inset-bottom));
+    position: fixed;
+    right: 0;
+    transform: translateY(110%);
+    transition: transform 0.25s ease;
+    z-index: 3;
+  }
+
+  .lx-sticky-atc.is-visible {
+    transform: translateY(0);
+  }
+
+  .lx-sticky-atc__info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lx-sticky-atc__title {
+    font-family: var(--lx-serif);
+    font-size: 1.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .lx-sticky-atc .price .price-item--sale,
+  .lx-sticky-atc .price .price-item--regular {
+    font-size: 1.4rem;
+  }
+
+  .lx-sticky-atc .button {
+    min-height: 4.4rem;
+    padding: 0 2rem;
+  }
+}
+
+/* Cart drawer */
+.drawer__inner {
+  background: var(--lx-bg);
+}
+
+.drawer__heading {
+  font-family: var(--lx-serif);
+  font-weight: 400;
+}
+
+.cart-item__name {
+  font-family: var(--lx-serif);
+  font-size: 1.7rem;
+}
+
+.cart-item__details .product-option,
+.cart-item__vendor {
+  font-size: 1.2rem;
+}
+
+.lx-cart-note {
+  border-top: 1px solid var(--lx-hairline);
+  color: var(--lx-muted);
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 1.2rem 0 0;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--lx-hairline);
+}
+
+.footer-block__heading {
+  font-family: var(--lx-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-block__details-content .list-menu__item--link,
+.footer-block__details-content a {
+  color: var(--lx-muted);
+  font-size: 1.4rem;
+}
+
+.footer-block__details-content .list-menu__item--link:hover {
+  color: var(--lx-text);
+  text-decoration: none;
+}
+
+.footer__copyright,
+.copyright__content {
+  font-size: 1.2rem;
+}
+
+.lx-pay-line {
+  color: var(--lx-muted);
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.lx-pay-line i {
+  color: var(--lx-hairline);
+  font-style: normal;
+  margin: 0 0.8rem;
+}
+
+/* Rich text pages (policies, about, authenticity) */
+.rte h2,
+.rte h3 {
+  font-family: var(--lx-serif);
+  font-weight: 500;
+}
+
+.main-page-title {
+  font-family: var(--lx-serif);
+  font-weight: 400;
+}
+
+.page-width--narrow .rte {
+  color: var(--lx-muted);
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.page-width--narrow .rte strong {
+  color: var(--lx-text);
+  font-weight: 500;
+}

@@ -1,0 +1,50 @@
+{{ 'luxebin-sections.css' | asset_url | stylesheet_tag }}
+{%- assign p = section.settings.product -%}
+<section class="lx-why" aria-labelledby="LxWhy-{{ section.id }}">
+  <div class="lx-why__img">
+    {%- if p != blank and p.media.size > 1 -%}
+      {{ p.media[1].preview_image | image_url: width: 1400 | image_tag: class: 'lx-why__tex', alt: p.media[1].alt, loading: 'lazy', widths: '700, 1000, 1400', sizes: '(min-width: 750px) 50vw, 100vw' }}
+    {%- endif -%}
+    {%- if p != blank and p.featured_media -%}
+      {{ p.featured_media.preview_image | image_url: width: 800 | image_tag: class: 'lx-why__jar', alt: '', loading: 'lazy', widths: '400, 600, 800', sizes: '20vw' }}
+    {%- endif -%}
+  </div>
+  <div class="lx-why__copy">
+    {%- if section.settings.eyebrow != blank -%}<p class="lx-caps lx-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+    <h2 id="LxWhy-{{ section.id }}">{{ section.settings.heading }}{% if section.settings.heading_em != blank %} <em>{{ section.settings.heading_em }}</em>{% endif %}</h2>
+    <div class="lx-pillars">
+      {%- for block in section.blocks -%}
+        <div class="lx-pillar" {{ block.shopify_attributes }}>
+          <span class="lx-pillar__n" aria-hidden="true">{% case forloop.index %}{% when 1 %}i.{% when 2 %}ii.{% when 3 %}iii.{% else %}iv.{% endcase %}</span>
+          <div><h3>{{ block.settings.title }}</h3><p>{{ block.settings.text }}</p></div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.button_label != blank -%}
+      <div><a class="button button--secondary lx-btn-ghost" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Luxebin why",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Why Luxebin" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The brands you love," },
+    { "type": "text", "id": "heading_em", "label": "Heading (italic part)", "default": "without the mark-up." },
+    { "type": "product", "id": "product", "label": "Product (2nd image = background texture, 1st = packshot)" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "How we source" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "blocks": [
+    { "type": "pillar", "name": "Pillar", "settings": [
+      { "type": "text", "id": "title", "label": "Title" },
+      { "type": "textarea", "id": "text", "label": "Text" }
+    ] }
+  ],
+  "max_blocks": 4,
+  "presets": [{ "name": "Luxebin why" }]
+}
+{% endschema %}

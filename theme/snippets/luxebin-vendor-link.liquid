@@ -1,0 +1,13 @@
+{%- comment -%} Brand name linking to its brand collection (falls back to the vendor search page). Accepts: product {%- endcomment -%}
+{%- liquid
+  assign brand_handle = product.vendor | handleize
+  assign brand_collection = collections[brand_handle]
+  if brand_collection.id
+    assign brand_url = brand_collection.url
+  else
+    assign brand_url = product.vendor | url_for_vendor
+  endif
+-%}
+<p class="product__text caption-with-letter-spacing">
+  <a class="product__vendor-link" href="{{ brand_url }}">{{ product.vendor | escape }}</a>
+</p>

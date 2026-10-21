@@ -1,0 +1,17 @@
+{%- comment -%} "100% Authentic — Guaranteed" badge linking to the authenticity page. {%- endcomment -%}
+{%- liquid
+  assign auth_page = pages['authenticity-guarantee']
+  if auth_page.id
+    assign auth_url = auth_page.url
+  else
+    assign auth_url = '/pages/authenticity-guarantee'
+  endif
+-%}
+<a class="lx-authentic" href="{{ auth_url }}">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg>
+  <span><strong>100% Authentic — Guaranteed</strong><span>Genuine products, every time. How we source &rarr;</span></span>
+</a>
+{%- if product.tags contains 'deluxe-mini' -%}
+  <p class="lx-final-sale-note">Deluxe mini size.</p>
+{%- endif -%}
+<p class="lx-final-sale-note">Final sale. Damaged in transit? We'll replace it.</p>

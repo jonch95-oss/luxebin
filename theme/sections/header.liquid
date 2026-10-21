@@ -205,7 +205,16 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <div class="header__heading-logo-wrapper">
+            <img
+              src="{{ 'wordmark-metallic.svg' | asset_url }}"
+              alt="{{ shop.name | escape }}"
+              class="header__heading-logo luxebin-wordmark"
+              width="{{ settings.logo_width }}"
+              height="{{ settings.logo_width | divided_by: 6.37 | round }}"
+              fetchpriority="high"
+            >
+          </div>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -248,7 +257,16 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <div class="header__heading-logo-wrapper">
+            <img
+              src="{{ 'wordmark-metallic.svg' | asset_url }}"
+              alt="{{ shop.name | escape }}"
+              class="header__heading-logo luxebin-wordmark"
+              width="{{ settings.logo_width }}"
+              height="{{ settings.logo_width | divided_by: 6.37 | round }}"
+              fetchpriority="high"
+            >
+          </div>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

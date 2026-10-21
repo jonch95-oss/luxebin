@@ -1,0 +1,19 @@
+{{ 'luxebin-sections.css' | asset_url | stylesheet_tag }}
+<section class="lx-brands" aria-label="{{ section.settings.label | escape }}">
+  <div class="lx-brands__track">
+    {%- for block in section.blocks -%}
+      {%- assign c = block.settings.collection -%}
+      {%- if c != blank -%}<a href="{{ c.url }}" {{ block.shopify_attributes }}>{{ c.title }}</a>{%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Luxebin brand strip",
+  "tag": "div",
+  "class": "section",
+  "settings": [{ "type": "text", "id": "label", "label": "Accessible label", "default": "Featured brands" }],
+  "blocks": [{ "type": "brand", "name": "Brand", "settings": [{ "type": "collection", "id": "collection", "label": "Brand collection" }] }],
+  "presets": [{ "name": "Luxebin brand strip" }]
+}
+{% endschema %}

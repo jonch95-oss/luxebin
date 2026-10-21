@@ -1,0 +1,25 @@
+{{ 'luxebin-sections.css' | asset_url | stylesheet_tag }}
+<section class="lx-sec lx-wrap lx-center" aria-labelledby="LxUgc-{{ section.id }}">
+  {%- if section.settings.eyebrow != blank -%}<p class="lx-caps lx-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+  <h2 class="lx-h2" id="LxUgc-{{ section.id }}">{{ section.settings.heading }}</h2>
+  <div class="lx-ugc__grid">
+    {%- for p in section.settings.products limit: 6 -%}
+      <a href="{{ p.url }}" aria-label="{{ p.vendor | escape }} {{ p.title | escape }}">
+        {%- if p.featured_media -%}{{ p.featured_media.preview_image | image_url: width: 500 | image_tag: alt: '', loading: 'lazy', widths: '250, 500', sizes: '(min-width: 750px) 16vw, 33vw' }}{%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Luxebin social grid",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "@luxebin" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Seen on you" },
+    { "type": "product_list", "id": "products", "label": "Products (placeholder until Instagram feed is connected)", "limit": 6 }
+  ],
+  "presets": [{ "name": "Luxebin social grid" }]
+}
+{% endschema %}
