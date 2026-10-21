@@ -29,7 +29,7 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 ## Pages and policies
 - [x] Pages: About, Authenticity Guarantee, FAQ, Contact (existing)
 - [ ] Policies: written (content/policies/*.html) but the API cannot save them; paste in Settings → Policies
-- [ ] Blog: not started (decide after seeing the theme)
+- [~] Blog "Journal": 3 posts written and saved as hidden drafts (routine, layering serums, labels); publish after you've seen them in the theme
 
 ## Settings
 - [x] Market: United States only, USD
@@ -40,7 +40,7 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [ ] Payments: confirm Shop Pay, Apple Pay, Google Pay, PayPal, Klarna/Afterpay enabled (Settings → Payments)
 - [ ] Taxes: NY nexus only (Settings → Taxes and duties)
 - [ ] Order/shipping notification emails restyled
-- [ ] Checkout branding (logo, colours, fonts)
+- [ ] Checkout branding: the API is locked on Basic, so set it in Settings → Checkout → Customize. Logo: brand/wordmark-dark.svg (export a PNG). Background #FAF6EF, order summary #F2EADF, text #2A2420, buttons #2A2420 with #FAF6EF text, accent #7C5A34, corners square, heading font Cormorant Garamond, body font Jost
 
 ## Apps and marketing
 - [x] Discount WELCOME10: 10% off, once per customer, combines with free shipping
