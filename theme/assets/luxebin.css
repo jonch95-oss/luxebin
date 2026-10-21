@@ -10,16 +10,8 @@
   --lx-accent-deep: #7c5a34;
   --lx-hairline: #e2d5c3;
   --lx-sale: #8c3b2e;
-  --lx-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --lx-sans: 'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
-
-  --font-heading-family: var(--lx-serif);
-  --font-heading-style: normal;
-  --font-heading-weight: 500;
-  --font-body-family: var(--lx-sans);
-  --font-body-style: normal;
-  --font-body-weight: 400;
-  --font-body-weight-bold: 500;
+  --lx-serif: var(--font-heading-family);
+  --lx-sans: var(--font-body-family);
 }
 
 body {
@@ -546,4 +538,90 @@ button.shopify-payment-button__button--unbranded {
   font-size: 1.4rem;
   padding-bottom: 0.2rem;
   text-decoration: none;
+}
+
+/* Round 2 fixes */
+.footer .footer-block__heading,
+.footer h2.footer-block__heading {
+  font-family: var(--lx-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+.footer-block__brand-info .rte,
+.footer-block__brand-info .rte p {
+  color: var(--lx-muted);
+  font-size: 1.4rem;
+  margin: 0 0 1.2rem;
+}
+
+.footer .list-menu__item--link {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.lx-btn-ghost,
+.button.lx-btn-ghost {
+  border: 1px solid var(--lx-text);
+  color: var(--lx-text);
+}
+
+.lx-btn-ghost:hover {
+  background: var(--lx-text);
+  color: var(--lx-bg);
+}
+
+.product-form__submit.button {
+  background: var(--lx-text);
+  color: var(--lx-bg);
+}
+
+.product-form__submit.button::after {
+  box-shadow: none;
+}
+
+.product-form__submit.button:hover {
+  background: var(--lx-accent-deep);
+}
+
+.lx-sticky-atc .badge,
+.lx-sticky-atc .price__badge-sale,
+.lx-sticky-atc .price__badge-sold-out,
+.lx-sticky-atc .loading__spinner {
+  display: none !important;
+}
+
+.card__heading .full-unstyled-link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 749px) {
+  .announcement-bar__message {
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Judge.me */
+.lx-reviews .lx-h2 {
+  font-family: var(--lx-serif);
+  font-size: clamp(2.8rem, 3vw, 3.6rem);
+  font-weight: 500;
+  margin: 0 0 2.4rem;
+}
+
+.jdgm-widget,
+.jdgm-rev-widg {
+  font-family: var(--lx-sans);
+}
+
+.jdgm-star {
+  color: var(--lx-accent) !important;
+}
+
+.jdgm-preview-badge {
+  margin: -0.4rem 0 1rem;
 }

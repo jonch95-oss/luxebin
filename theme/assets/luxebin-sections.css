@@ -11,7 +11,7 @@
 
 /* hero */
 .lx-hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#efe4d3 0%,#f7f0e5 48%,#e9dcc8 100%)}
-.lx-hero__grid{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:4rem;min-height:62rem;position:relative;z-index:1}
+.lx-hero__grid{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:4rem;min-height:62rem;position:relative}
 .lx-hero__arc{position:absolute;right:-18rem;top:-16rem;width:62rem;height:62rem;border:1px solid rgba(162,123,76,.35);border-radius:50%;pointer-events:none}
 .lx-hero__eyebrow{color:var(--lx-accent-deep);font-size:1.3rem}
 .lx-hero h1{font-family:var(--lx-serif);font-weight:400;font-size:clamp(4.4rem,5.6vw,8rem);line-height:1.02;letter-spacing:-.01em;margin:2rem 0 2.2rem}
