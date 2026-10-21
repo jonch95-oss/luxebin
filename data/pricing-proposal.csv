@@ -1,6 +1,6 @@
 sku,product,unit_cost,current_price,msrp,proposed_price,margin,status
 DRUNK-005,Drunk Elephant B-Hydra Intensive Hydration Serum,6.5,15.00,,15.0,57%,"unchanged, no compare-at, tag deluxe-mini"
-ATU-KYLIE-129,Kylie Cosmetics High Gloss,7.5,22.00,20,17.0,56%,applied
+ATU-KYLIE-129,Kylie Cosmetics High Gloss,7.5,22.00,21.0,17.5,57%,applied (corrected to brand-site $21)
 ATU-KYLIE-131,Kylie Cosmetics Plumping Lip Liner,8.5,19.00,19,16.0,47%,applied
 DRUNK-062,Drunk Elephant Protini Polypeptide Cream,4.75,15.00,,12.0,60%,"applied, no compare-at, tag deluxe-mini"
 ATU-RARE-058,Rare Beauty Soft Pinch Tinted Lip Oil Stain,7.5,23.00,24,20.0,62%,applied
@@ -20,10 +20,10 @@ LAURAM-287,Laura Mercier Real Flawless Luminous Perfecting Pressed Powder,15.5,4
 DRUNK-044,Drunk Elephant Lala Retro Whipped Cream,9.0,27.00,22,18.5,51%,applied
 ATU-LANE-008,Laneige Water Bank and Sleeping Mask Toner 3-Piece Set,6.5,25.00,,25.0,74%,left as is per owner
 LANE-009,Laneige Lip Sleeping Mask,11.5,24.00,24,21.0,45%,"applied (12.5% off, approved exception)"
-LAURAM-291,Laura Mercier Neroli Du Sud Serum Body Cream,24.5,78.00,78,66.0,63%,applied
+LAURAM-291,Laura Mercier Neroli Du Sud Serum Body Cream,24.5,78.00,55.0,46.5,47%,applied (corrected to brand-site $55)
 MAYB-907,Maybelline Colorsensational Lip Gloss,0.5,12.99,,5.0,90%,"applied, no compare-at (discontinued)"
 ATU-FBM-005,Florence by Mills Mark My Words Lip Liner,3.5,12.00,12,10.0,65%,applied
-DPP-004,Dr Pawpaw Mini Nude Collection 3-Piece Set,2.75,19.99,12.5,10.5,74%,applied
+DPP-004,Dr Pawpaw Mini Nude Collection 3-Piece Set,2.75,19.99,19.99,16.5,83%,applied (corrected to brand-site $19.99)
 INB-OLAP-048,Olaplex No. 4 Bond Maintenance Shampoo,12.5,34.00,34,28.5,56%,applied
 ESLA-239,Estée Lauder Double Wear Stay-in-Place Concealer,7.5,32.00,,27.0,72%,"applied, no compare-at (discontinued)"
 NARS-314,Nars Sheer Glow Foundation,12.0,47.00,50,42.5,72%,applied
