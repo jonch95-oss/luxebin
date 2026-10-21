@@ -121,12 +121,17 @@
                               width: settings.brand_image_width
                           }}
                         </div>
+                      {%- else -%}
+                        <img class="lx-footer-wordmark" src="{{ 'wordmark-metallic.svg' | asset_url }}" alt="{{ shop.name | escape }}" width="160" height="25" loading="lazy">
                       {%- endif -%}
                       {%- if settings.brand_headline != blank -%}
-                        <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
+                        <p class="lx-footer-tag">{{ settings.brand_headline }}</p>
                       {%- endif -%}
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
+                      {%- endif -%}
+                      {%- if shop.email != blank -%}
+                        <p class="lx-footer-mail"><a href="mailto:support@luxebin.co">support@luxebin.co</a></p>
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}

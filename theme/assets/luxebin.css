@@ -525,3 +525,25 @@ button.shopify-payment-button__button--unbranded {
   color: var(--lx-text);
   font-weight: 500;
 }
+
+.lx-footer-wordmark {
+  display: block;
+  height: auto;
+  margin-bottom: 2rem;
+  width: 16rem;
+}
+
+.lx-footer-tag {
+  color: var(--lx-muted);
+  font-size: 1.4rem;
+  margin: 0 0 1.2rem;
+  max-width: 30rem;
+}
+
+.lx-footer-mail a {
+  border-bottom: 1px solid var(--lx-hairline);
+  color: var(--lx-text);
+  font-size: 1.4rem;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+}

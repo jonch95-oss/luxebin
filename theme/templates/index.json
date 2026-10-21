@@ -1,75 +1,311 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "luxebin-hero",
+      "settings": {
+        "eyebrow": "The Autumn Edit",
+        "heading": "Prestige,",
+        "heading_em": "minus the premium.",
+        "text": "Rare Beauty, Laura Mercier, Laneige and the names you already love. 100% authentic, and always below retail.",
+        "button_label": "Shop the Edit",
+        "button_link": "shopify://collections/best-sellers",
+        "button_2_label": "Our Authenticity Promise",
+        "button_2_link": "shopify://pages/authenticity-guarantee",
+        "product_1": "laura-mercier-neroli-du-sud-serum-body-cream",
+        "product_2": "kylie-cosmetics-high-gloss",
+        "product_3": "dibs-beauty-jam-jam-plumping-lipstick-melt",
+        "product_4": "laura-mercier-real-flawless-luminous-perfecting-pressed-powder"
+      }
+    },
+    "cats": {
+      "type": "luxebin-categories",
+      "settings": {
+        "eyebrow": "Shop by category",
+        "heading": "Find your ritual"
+      },
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "c1": {
+          "type": "tile",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "collection": "makeup",
+            "image_product": "kylie-cosmetics-high-gloss",
+            "bleed": false
           }
         },
-        "button": {
-          "type": "buttons",
+        "c2": {
+          "type": "tile",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "collection": "skincare",
+            "image_product": "laneige-lip-sleeping-mask",
+            "bleed": true
+          }
+        },
+        "c3": {
+          "type": "tile",
+          "settings": {
+            "collection": "body-hair",
+            "label": "Body & Hair",
+            "image_product": "laura-mercier-neroli-du-sud-serum-body-cream",
+            "bleed": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
+        "c1",
+        "c2",
+        "c3"
+      ]
     },
-    "featured_collection": {
+    "brands": {
+      "type": "luxebin-brands",
+      "settings": {
+        "label": "Featured brands"
+      },
+      "blocks": {
+        "b0": {
+          "type": "brand",
+          "settings": {
+            "collection": "rare-beauty"
+          }
+        },
+        "b1": {
+          "type": "brand",
+          "settings": {
+            "collection": "laura-mercier"
+          }
+        },
+        "b2": {
+          "type": "brand",
+          "settings": {
+            "collection": "drunk-elephant"
+          }
+        },
+        "b3": {
+          "type": "brand",
+          "settings": {
+            "collection": "nars"
+          }
+        },
+        "b4": {
+          "type": "brand",
+          "settings": {
+            "collection": "olaplex"
+          }
+        },
+        "b5": {
+          "type": "brand",
+          "settings": {
+            "collection": "laneige"
+          }
+        },
+        "b6": {
+          "type": "brand",
+          "settings": {
+            "collection": "estee-lauder"
+          }
+        },
+        "b7": {
+          "type": "brand",
+          "settings": {
+            "collection": "sol-de-janeiro"
+          }
+        },
+        "b8": {
+          "type": "brand",
+          "settings": {
+            "collection": "kylie-cosmetics"
+          }
+        },
+        "b9": {
+          "type": "brand",
+          "settings": {
+            "collection": "dibs-beauty"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9"
+      ]
+    },
+    "best": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "Best Sellers",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "best-sellers",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
         "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
+        "show_secondary_image": false,
+        "show_vendor": true,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "swipe_on_mobile": true,
+        "padding_top": 96,
+        "padding_bottom": 0
       }
+    },
+    "why": {
+      "type": "luxebin-why",
+      "settings": {
+        "eyebrow": "Why Luxebin",
+        "heading": "The brands you love,",
+        "heading_em": "without the mark-up.",
+        "product": "laura-mercier-neroli-du-sud-serum-body-cream",
+        "button_label": "How we source",
+        "button_link": "shopify://pages/authenticity-guarantee"
+      },
+      "blocks": {
+        "p1": {
+          "type": "pillar",
+          "settings": {
+            "title": "100% Authentic — Guaranteed",
+            "text": "Genuine products, sourced through established distribution channels. Every item, every time."
+          }
+        },
+        "p2": {
+          "type": "pillar",
+          "settings": {
+            "title": "Always below retail",
+            "text": "We buy surplus and closeout stock, so you pay less than the counter price."
+          }
+        },
+        "p3": {
+          "type": "pillar",
+          "settings": {
+            "title": "Shipped from New York",
+            "text": "Carefully packed and sent to anywhere in the US."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ]
+    },
+    "new": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-arrivals",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 96,
+        "padding_bottom": 0
+      }
+    },
+    "trust": {
+      "type": "luxebin-trust",
+      "settings": {
+        "label": "Our promises"
+      },
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "100% Authentic",
+            "text": "Guaranteed genuine"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "Final sale, clearly",
+            "text": "Damaged in transit? Replaced."
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "lock",
+            "title": "Secure checkout",
+            "text": "Shop Pay, Apple Pay, PayPal"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Ships from NY",
+            "text": "Free over $50"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ]
+    },
+    "ugc": {
+      "type": "luxebin-ugc",
+      "settings": {
+        "eyebrow": "@luxebin",
+        "heading": "Seen on you",
+        "products": [
+          "kylie-cosmetics-high-gloss",
+          "rare-beauty-positive-light-liquid-luminizer",
+          "sol-de-janeiro-beija-flor-renewing-body-wash",
+          "dibs-beauty-jam-jam-plumping-lipstick-melt",
+          "laura-mercier-real-flawless-luminous-perfecting-pressed-powder",
+          "truly-beauty-cherry-baby-shimmer-luxury-peptide-lip-oil"
+        ]
+      }
+    },
+    "news": {
+      "type": "luxebin-newsletter",
+      "settings": {}
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero",
+    "cats",
+    "brands",
+    "best",
+    "why",
+    "new",
+    "trust",
+    "ugc",
+    "news"
   ]
 }
