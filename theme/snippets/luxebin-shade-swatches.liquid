@@ -1,0 +1,30 @@
+{%- comment -%}
+  Adds a colour dot to each shade button, using the product's custom.shade_colors metafield
+  (JSON object: {"Shade name": "#hex"}). Accepts: product
+{%- endcomment -%}
+{%- assign shade_colors = product.metafields.custom.shade_colors.value -%}
+{%- if shade_colors != blank -%}
+  <style>
+    {%- for option in product.options_with_values -%}
+      {%- for value in option.values -%}
+        {%- assign hex = shade_colors[value.name] -%}
+        {%- if hex != blank -%}
+          .product-form__input input[type='radio'][value="{{ value.name | escape }}"] + label::before {
+            background: {{ hex }};
+            inset: auto;
+            position: relative;
+            z-index: auto;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+            content: '';
+            display: inline-block;
+            height: 1.4rem;
+            margin-right: 0.8rem;
+            vertical-align: -0.2rem;
+            width: 1.4rem;
+          }
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </style>
+{%- endif -%}

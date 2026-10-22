@@ -151,6 +151,11 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing card__vendor">{{ card_product.vendor }}</div>
             {%- endif -%}
+            {%- if card_product.tags contains 'deluxe-mini' -%}
+              <p class="lx-card-flag">Deluxe mini</p>
+            {%- elsif card_product.tags contains 'gift-set' -%}
+              <p class="lx-card-flag">Gift set</p>
+            {%- endif -%}
             <h3
               class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
               {% if card_product.featured_media or settings.card_style == 'card' %}

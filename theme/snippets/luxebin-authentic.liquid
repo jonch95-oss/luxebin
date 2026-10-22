@@ -13,5 +13,8 @@
 </a>
 {%- if product.tags contains 'deluxe-mini' -%}
   <p class="lx-final-sale-note">Deluxe mini size.</p>
+{%- elsif product.tags contains 'gift-set' -%}
+  <p class="lx-final-sale-note">Gift set, boxed by the brand.</p>
 {%- endif -%}
+{%- render 'luxebin-stock-note', product: product -%}
 <p class="lx-final-sale-note">Final sale. Damaged in transit? We'll replace it.</p>

@@ -16,7 +16,7 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [x] No empty collections
 - [x] Menus: luxebin-main (mega menu), footer Shop / Help / Luxebin
 
-## Theme ("Luxebin — Warm Luxury v2", unpublished, built on Dawn 16.0.0)
+## Theme ("Luxebin — Warm Luxury v3", unpublished, built on Dawn 16.0.0)
 - [x] Direction B tokens, Cormorant Garamond + Jost, metallic wordmark
 - [x] Homepage sections in brief order
 - [x] Product page: brand link, title, price with retail struck through and Save X%, shade pills, accordions, authenticity badge, sticky add-to-bag on mobile, You may also like
@@ -24,7 +24,7 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [x] Theme check: 0 errors
 - [x] Walkthrough screenshots in screens/: homepage desktop + mobile, Makeup collection desktop + mobile, 10 product pages, product page mobile, Authenticity page, 404. No Liquid errors, no sideways scroll at 390px, cream background and header on every page
 - [ ] Lighthouse mobile/desktop scores: run once the password page is off (the password page blocks automated testing). Fonts now load from Shopify's own CDN, nothing render-blocking from apps on the homepage
-- [ ] Publish theme v2 (on your go-ahead). Old themes "Dawn 16 import" and "Luxebin v1" can be deleted
+- [ ] Publish theme v3 (on your go-ahead). Old themes "Dawn 16 import", "Luxebin v1" and "Luxebin v2" can be deleted
 
 ## Pages and policies
 - [x] Pages: About, Authenticity Guarantee, FAQ, Contact (existing)
@@ -57,3 +57,16 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [ ] Every nav link resolves
 - [ ] 404 page styled
 - [ ] Password page OFF — only when you say so
+
+## Round 3 additions
+- [x] Merged duplicates: Rare Beauty Soft Pinch Tinted Lip Oil (Wonder, Hope) and Truly Luxury Peptide Lip Oil (Glazed Donut, Cherry Baby Shimmer); old products archived with stock zeroed and old links redirected. Catalogue is now 24 active products / 29 variants
+- [x] Shade colour dots on Rare Beauty, Truly and Dibs
+- [x] "Deluxe mini" / "Gift set" labels on cards and product pages; quiet "Only a few left" line on product pages when real stock is 5 or fewer
+- [x] Brands A–Z page (/pages/brands), linked from the Brands menu
+- [x] About page redesigned with the full badge artwork
+- [x] Google product category on all 24 active products (Google Shopping readiness)
+- [ ] Sol de Janeiro body wash has no barcode: read it from the bottle and add it in the product's variant
+- [x] Journal: 5 posts saved as hidden drafts
+- [x] Weekly report scheduled every Monday 8:38am New York (push + email)
+- [ ] Weekly report: attach the Shopify connector to the "Luxebin weekly report" routine in claude.ai so it can read the store
+- [ ] Notification emails: logo and accent colour (content/notifications/README.md)

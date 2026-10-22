@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "luxebin-brands-az",
+      "settings": {
+        "menu": "luxebin-main",
+        "parent_title": "Brands"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

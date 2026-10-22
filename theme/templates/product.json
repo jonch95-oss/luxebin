@@ -54,6 +54,12 @@
           "settings": {
             "custom_liquid": "<div class=\"jdgm-widget jdgm-preview-badge\" data-id=\"{{ product.id }}\">{{ product.metafields.judgeme.badge }}</div>"
           }
+        },
+        "swatches": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'luxebin-shade-swatches', product: product %}"
+          }
         }
       },
       "block_order": [
@@ -61,6 +67,7 @@
         "title",
         "rating",
         "price",
+        "swatches",
         "variant_picker",
         "buy_buttons",
         "authentic",

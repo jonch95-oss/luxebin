@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "luxebin-about",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

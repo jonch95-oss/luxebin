@@ -1,0 +1,24 @@
+<section class="page-width lx-sec" style="--lx-pt: 6.4rem; padding-bottom: 9rem;">
+  <div class="lx-about">
+    <div class="lx-about__badge">
+      <img src="{{ 'luxebin-badge.jpg' | asset_url }}" alt="The Luxebin badge" width="900" height="900" loading="eager">
+    </div>
+    <div class="lx-about__copy">
+      <p class="lx-caps lx-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1>{{ section.settings.heading }}{% if section.settings.heading_em != blank %} <em>{{ section.settings.heading_em }}</em>{% endif %}</h1>
+      <div class="rte">{{ page.content }}</div>
+    </div>
+  </div>
+</section>
+{{ 'luxebin-sections.css' | asset_url | stylesheet_tag }}
+{% schema %}
+{
+  "name": "Luxebin about",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "About Luxebin" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Prestige beauty," },
+    { "type": "text", "id": "heading_em", "label": "Heading (italic part)", "default": "priced with care." }
+  ],
+  "presets": [{ "name": "Luxebin about" }]
+}
+{% endschema %}

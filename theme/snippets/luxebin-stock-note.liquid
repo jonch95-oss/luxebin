@@ -1,0 +1,5 @@
+{%- comment -%} Quiet low-stock line on the product page (real inventory only, 1–5 units). Accepts: product {%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+{%- if v.inventory_management == 'shopify' and v.inventory_quantity > 0 and v.inventory_quantity <= 5 -%}
+  <p class="lx-final-sale-note lx-stock-note">Only a few left in this {% if product.has_only_default_variant %}size{% else %}shade{% endif %}.</p>
+{%- endif -%}

@@ -1,0 +1,42 @@
+{%- comment -%} Brands A–Z index built from the Brands submenu of the chosen menu. {%- endcomment -%}
+<section class="page-width lx-sec" style="--lx-pt: 6.4rem; padding-bottom: 8rem;">
+  <p class="lx-caps lx-eyebrow">{{ section.settings.eyebrow }}</p>
+  <h1 class="main-page-title h0" style="margin:0">{{ section.settings.heading }}</h1>
+  {%- liquid
+    assign brand_links = blank
+    for link in linklists[section.settings.menu].links
+      if link.title == section.settings.parent_title
+        assign brand_links = link.links
+      endif
+    endfor
+  -%}
+  {%- if brand_links != blank -%}
+    {%- assign current_letter = '' -%}
+    <div class="lx-brands-az">
+      {%- for link in brand_links -%}
+        {%- if link.type != 'collection_link' -%}{%- continue -%}{%- endif -%}
+        {%- assign letter = link.title | slice: 0 | upcase -%}
+        {%- if letter != current_letter -%}
+          {%- if current_letter != '' -%}</ul></div>{%- endif -%}
+          <div><h2 class="lx-brands-az__letter">{{ letter }}</h2><ul>
+          {%- assign current_letter = letter -%}
+        {%- endif -%}
+        <li><a href="{{ link.url }}">{{ link.title }}</a><small>{{ link.object.products_count }}</small></li>
+      {%- endfor -%}
+      {%- if current_letter != '' -%}</ul></div>{%- endif -%}
+    </div>
+  {%- endif -%}
+</section>
+{{ 'luxebin-sections.css' | asset_url | stylesheet_tag }}
+{% schema %}
+{
+  "name": "Luxebin brands A–Z",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Shop by brand" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Brands A–Z" },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" },
+    { "type": "text", "id": "parent_title", "label": "Menu item that holds the brands", "default": "Brands" }
+  ],
+  "presets": [{ "name": "Luxebin brands A–Z" }]
+}
+{% endschema %}
