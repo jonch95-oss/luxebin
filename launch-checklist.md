@@ -23,7 +23,8 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [x] Cart drawer with final-sale note
 - [x] Theme check: 0 errors
 - [x] Walkthrough screenshots in screens/: homepage desktop + mobile, Makeup collection desktop + mobile, 10 product pages, product page mobile, Authenticity page, 404. No Liquid errors, no sideways scroll at 390px, cream background and header on every page
-- [ ] Lighthouse mobile/desktop scores: run once the password page is off (the password page blocks automated testing). Fonts now load from Shopify's own CDN, nothing render-blocking from apps on the homepage
+- [x] Lighthouse (2026-11-05, live site). Home mobile: Performance 76, Accessibility 96, Best Practices 75, SEO 92. Home desktop: 94 / 96 / 74 / 92. Collection mobile: 86 / 96 / 75 / 100. Best Practices is held back by app third-party cookies and console errors (outside the theme)
+- [ ] Homepage meta description (SEO 92 → 100): Online Store → Preferences → Meta description. Paste: "Prestige beauty, 100% authentic and guaranteed, for less than retail. Shop Olaplex, Rare Beauty, K18, Glow Recipe and more at Luxebin." (the theme fallback is in the repo, but the connector can't write to the live theme)
 - [ ] Publish theme v3 (on your go-ahead). Old themes "Dawn 16 import", "Luxebin v1" and "Luxebin v2" can be deleted
 
 ## Pages and policies
@@ -56,7 +57,7 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [ ] All wallets visible at checkout
 - [ ] Every nav link resolves
 - [ ] 404 page styled
-- [ ] Password page OFF — only when you say so
+- [x] Password page OFF (done by you; site live, theme v3 published)
 
 ## Round 3 additions
 - [x] Merged duplicates: Rare Beauty Soft Pinch Tinted Lip Oil (Wonder, Hope) and Truly Luxury Peptide Lip Oil (Glazed Donut, Cherry Baby Shimmer); old products archived with stock zeroed and old links redirected. Catalogue is now 24 active products / 29 variants
@@ -70,3 +71,12 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [x] Weekly report scheduled every Monday 8:38am New York (push + email)
 - [ ] Weekly report: attach the Shopify connector to the "Luxebin weekly report" routine in claude.ai so it can read the store
 - [ ] Notification emails: logo and accent colour (content/notifications/README.md)
+
+## Round 4: 11 new products (2026-10-30 batch)
+- [x] Priced at 15% below verified MSRP with compare-at prices (Urban Decay De-Slick travel is $13 with no compare-at because the MSRP isn't verified)
+- [x] Descriptions, benefits / how-to / ingredients metafields, SEO titles and descriptions
+- [x] New collections: Eyes, Glow Recipe, Fekkai, K18, Makeup by Mario, Urban Decay; New Arrivals now shows these 8 new products
+- [x] Menu: Makeup → Face / Eyes / Lips; Brands A–Z now lists 21 brands
+- [x] Clean brand packshots set as the main image on 7 products, your own photos kept second with alt text; duplicate Fekkai image removed
+- [ ] Review edits made in admin: Olaplex No. 4 (price = compare-at 34/34, description says "fine hair"), LalaRetro (22/22), Protini (24, no compare-at), Maybelline ($13). When price equals compare-at, no "Save %" shows
+- [ ] Stock: many items show 0 on hand, so they display as sold out. Set real quantities
