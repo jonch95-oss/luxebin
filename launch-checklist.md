@@ -78,5 +78,8 @@ Status key: [x] done and verified · [~] done, needs a check from you · [ ] not
 - [x] New collections: Eyes, Glow Recipe, Fekkai, K18, Makeup by Mario, Urban Decay; New Arrivals now shows these 8 new products
 - [x] Menu: Makeup → Face / Eyes / Lips; Brands A–Z now lists 21 brands
 - [x] Clean brand packshots set as the main image on 7 products, your own photos kept second with alt text; duplicate Fekkai image removed
-- [ ] Review edits made in admin: Olaplex No. 4 (price = compare-at 34/34, description says "fine hair"), LalaRetro (22/22), Protini (24, no compare-at), Maybelline ($13). When price equals compare-at, no "Save %" shows
-- [ ] Stock: many items show 0 on hand, so they display as sold out. Set real quantities
+- [x] Prices re-checked 2026-11-05: Olaplex No. 4 $28.50/$34, Lala Retro $18.50/$22, Protini $20/$24, Maybelline $11/$13, all correct. Olaplex No. 4 barcode (850056933575) is the new 4FINE series, so it was renamed "No. 4FINE Bond Maintenance Volumizing Shampoo" with matching description and SEO
+- [x] Owner's rule: stock left at 0, and sold-out products come off the site. 10 products set to Draft and tagged auto-hidden-soldout (Kylie High Gloss, Kylie Lip Liner, Truly lip oil, RB Luminizer, Sol de Janeiro wash, Dibs, Laneige set, Laneige Lip Mask, Florence liner, Olaplex Endless Shine set). 24 products live. Six empty brands removed from the menu (A–Z page follows the menu)
+- [x] Daily sold-out sweep at 6:17am New York (hides sold-out products, restores restocked ones) and weekly report Mondays 8:38am, both running in the Claude session that has the Shopify connection. The old weekly report, which had no store access, is disabled
+- [x] Free shipping threshold now $50: Standard $8 under $50, Free Standard Shipping from $50, Express $15
+- [ ] Remaining admin-screen items (policies, store email, homepage meta, hero text, app embeds, filters, checkout branding, old themes, Klaviyo): run content/admin-handoff-prompt.md in Claude Code with Chrome
